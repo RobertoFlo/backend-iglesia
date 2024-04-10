@@ -16,8 +16,10 @@ return new class extends Migration
             $table->string('fecha_bautizo');
             $table->integer('id_Persona');
             $table->string('nombre_Parroco');
-           
+            $table->integer('id_documento');
+
             $table->foreign('id_Persona')->references('id')->on('persona');
+            $table->foreign('id_documento')->references('id')->on('Documento');
 
             $table->timestamps();
         });
