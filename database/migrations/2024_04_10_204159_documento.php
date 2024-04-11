@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('libro');
 
             $table->foreign('id_tipo_documento')->references('id')->on('ctl_documentos');
-            $table->foreign('id_Persona')->references('id')->on('persona');
+            $table->foreign('id_persona')->references('id')->on('persona');
 
             $table->timestamps();
         });
