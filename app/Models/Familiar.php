@@ -20,11 +20,11 @@ class Familiar extends Model
 
     public function persona()
     {
-        return $this->hasMany(Persona::class, 'id_persona');
+        return $this->belongsTo(Persona::class, 'id_persona');
     }
 
     public function parentesco()
     {
-        return $this->hasOne(Parentesco::class, 'id_parentesco');
+        return $this->belongsTo(Parentesco::class, 'id_parentesco');
     }
 }

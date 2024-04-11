@@ -53,18 +53,13 @@ class Persona extends Model
     return $this->hasOne(Familiar::class, 'id_persona');
    }
 
-   public function documento()
-   {
-    return $this->belongsTo(Documento::class, 'id_Persona');
-   }
-
    public function declaracion()
    {
-    return $this->hasMany(Declaracion::class, 'id_Persona');
+    return $this->hasOne(Declaracion::class, 'id_Persona');
    }
 
    public function declaracion_testigo()
    {
-    return $this->hasMany(DeclaracionTestigo::class, 'id_Persona');
+    return $this->hasOne(DeclaracionTestigo::class, 'id_Persona');
    }
 }

@@ -18,6 +18,6 @@ class Parentesco extends Model
 
     public function familiar()
     {
-        return $this->hasMany(Familiar::class, 'id_parentesco');
+        return $this->hasOne(Familiar::class, 'id_parentesco');
     }
 }

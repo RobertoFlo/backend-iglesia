@@ -17,6 +17,6 @@ class Religion extends Model
 
     public function persona()
     {
-        return $this->hasMany(Persona::class, 'id_religion');
+        return $this->hasOne(Persona::class, 'id_religion');
     }
 }
