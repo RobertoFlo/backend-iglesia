@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('Familiar', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_Persona');
-            $table->integer('id_Parentesco');
+            $table->integer('id_persona');
+            $table->integer('id_parentesco');
             
-            $table->foreign('id_Persona')->references('id')->on('persona');
-            $table->foreign('id_Parentesco')->references('id')->on('ctl_parentesco');
+            $table->foreign('id_persona')->references('id')->on('persona');
+            $table->foreign('id_parentesco')->references('id')->on('ctl_parentesco');
          
             $table->timestamps();
         });

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('persona', function (Blueprint $table) {
             $table->id();
             $table->integer('id_familiar');
-            $table->string('primer_Nombre');
+            $table->string('primer_nombre');
             $table->string('segundo_nombre')->nullable();
             $table->string('primer_apellido');
             $table->string('segundo_apellido')->nullable();

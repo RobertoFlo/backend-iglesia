@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ctl_documento', function (Blueprint $table) {
+        Schema::create('ctl_documentos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
             $table->timestamps();
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::drop('ctl_documento');
+        Schema::drop('ctl_documentos');
     }
 };
