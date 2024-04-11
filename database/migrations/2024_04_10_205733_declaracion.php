@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->date('fecha_declaracion');
             $table->date('fecha_celebracion');
-            $table->integer('id_Persona');
+            $table->integer('id_persona');
             $table->string('numero_expediente');
             $table->integer('id_documento');
           
-            $table->foreign('id_Persona')->references('id')->on('persona');
+            $table->foreign('id_persona')->references('id')->on('persona');
             $table->foreign('id_documento')->references('id')->on('Documento');
             $table->timestamps();
         });
