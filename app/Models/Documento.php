@@ -31,7 +31,7 @@ class Documento extends Model
 
     public function persona()
     {
-        return $this->hasMany(Persona::class, 'id_Persona');
+        return $this->hasMany(Persona::class, 'id_persona');
     }
     public function declaracion()
     {
