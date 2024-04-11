@@ -19,9 +19,10 @@ return new class extends Migration
             $table->string('padrino')->nullable();
             $table->string('madrina')->nullable();
             $table->string('parroquia_bautizo');
-           
+            $table->integer('id_documento');
+            
             $table->foreign('id_Persona')->references('id')->on('persona');
-
+            $table->foreign('id_documento')->references('id')->on('Documento');
             $table->timestamps();
         });
     }

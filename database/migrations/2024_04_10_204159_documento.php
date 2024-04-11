@@ -11,7 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('Documento', function (Blueprint $table) {
+            $table->id();
+            $table->string('parroquia');
+            $table->integer('id_persona');
+            $table->string('numero_tomo')->nullable();
+            $table->string('numero_pagina')->nullable();
+            $table->integer('id_tipo_documento');
+            $table->string('comentarios',255)->nullable();
+            $table->string('anio');
+            $table->string('libro');
+
+            $table->foreign('id_tipo_documento')->references('id')->on('ctl_documentos');
+            $table->foreign('id_Persona')->references('id')->on('persona');
+
+            $table->timestamps();
+        });
     }
 
     /**
@@ -19,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::drop('Documento');
     }
 };
