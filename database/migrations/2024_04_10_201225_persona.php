@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('persona', function (Blueprint $table) {
             $table->id();
-            $table->string('id_familiar');
+            $table->integer('id_familiar');
             $table->string('primer_Nombre');
             $table->string('segundo_nombre')->nullable();
             $table->string('primer_apellido');
@@ -34,7 +34,7 @@ return new class extends Migration
 
             $table->foreign('id_departamento')->references('id')->on('ctl_departamento');
             $table->foreign('id_estado_civil')->references('id')->on('ctl_estado_civil');
-            $table->foreign('id_religion')->references('id')->on('ctl_religion');
+             $table->foreign('id_religion')->references('id')->on('ctl_religion');
 
             $table->timestamps();
         });

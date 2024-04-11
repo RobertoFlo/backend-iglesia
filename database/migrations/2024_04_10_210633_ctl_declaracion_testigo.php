@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('ctl_declaracion_testigo', function (Blueprint $table) {
             $table->id();
             $table->integer('id_Persona');
-            $table->string('id_declaracion');
+            $table->integer('id_declaracion');
           
           
             $table->foreign('id_Persona')->references('id')->on('persona');

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('anio');
             $table->string('libro');
 
-            $table->integer('id_tipo_documento')->references('id')->on('ctl_documento');
+            $table->foreign('id_tipo_documento')->references('id')->on('ctl_documento');
             $table->foreign('id_Persona')->references('id')->on('persona');
 
             $table->timestamps();
