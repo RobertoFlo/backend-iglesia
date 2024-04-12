@@ -14,7 +14,7 @@ class Documento extends Model
 
     protected $fillable = [
      'parroquia',
-     'id_persona',
+   
      'numero_tomo',
      'numero_pagina',
      'id_tipo_documento',
@@ -26,15 +26,22 @@ class Documento extends Model
 
     public function documentos()
     {
-        return $this->hasOne(Documentos::class, 'id_tipo_documento');
+        return $this->belongsTo(Documentos::class, 'id_tipo_documento');
     }
 
-    public function persona()
+    public function confirma()
     {
-        return $this->hasMany(Persona::class, 'id_persona');
+        return $this->hasOne(Confirma::class, 'id_documento');
     }
+
+    public function bautizo()
+    {
+        return $this->hasOne(Bautizo::class, 'id_documento');
+    }
+
+  
     public function declaracion()
     {
-        return $this->hasOne(Declaracion::class, 'id_documento');
+        return $this->hasMany(Declaracion::class, 'id_documento');
     }
 }

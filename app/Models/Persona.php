@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Console\View\Components\Confirm;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -56,6 +57,16 @@ class Persona extends Model
    public function declaracion()
    {
     return $this->hasOne(Declaracion::class, 'id_Persona');
+   }
+
+   public function bautizo()
+   {
+    return $this->hasOne(Bautizo::class, 'id_Persona');
+   }
+
+   public function confirma()
+   {
+    return $this->hasOne(Confirma::class, 'id_Persona');
    }
 
    public function declaracion_testigo()
