@@ -17,6 +17,6 @@ class Documentos extends Model
 
     public function documento()
     {
-        return $this->belongsTo(Documento::class, 'id_tipo_documento');
+        return $this->hasOne(Documento::class, 'id_tipo_documento');
     }
 }

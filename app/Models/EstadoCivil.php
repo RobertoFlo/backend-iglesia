@@ -18,6 +18,6 @@ class EstadoCivil extends Model
     
     public function persona()
     {
-        return $this->hasMany(Persona::class, 'id_estado_civil');
+        return $this->hasOne(Persona::class, 'id_estado_civil');
     }
 }

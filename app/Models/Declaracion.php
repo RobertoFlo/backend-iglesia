@@ -32,9 +32,10 @@ class Declaracion extends Model
     {
         return $this->belongsTo(Documento::class, 'id_documento');
     }
-
-    public function declaracion()
+    public function declaracion_testigo()
     {
-        return $this->hasMany(Declaracion::class, 'id_declaracion');
+        return $this->hasOne(DeclaracionTestigo::class,'id_declaracion');
     }
+
+   
 }
