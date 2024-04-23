@@ -9,7 +9,7 @@ class DeclaracionTestigo extends Model
 {
     use HasFactory;
 
-    protected $table = 'ctl_declaracion_testigo';
+    protected $table = 'declaracion_testigo';
 
 
     protected $fillable = [
