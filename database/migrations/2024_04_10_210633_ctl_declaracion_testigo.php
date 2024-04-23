@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ctl_declaracion_testigo', function (Blueprint $table) {
+        Schema::create('declaracion_testigo', function (Blueprint $table) {
             $table->id();
             $table->integer('id_Persona');
             $table->integer('id_declaracion');
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::drop('ctl_declaracion_testigo');
+        Schema::drop('declaracion_testigo');
     }
 };
