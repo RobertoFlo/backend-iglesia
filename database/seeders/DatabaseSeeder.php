@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             CtlDocumentos::class,
             UserSeeder::class,
             PermisosSeeder::class,
+            
         ]);
     }
 }

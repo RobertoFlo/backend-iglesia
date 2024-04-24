@@ -29,7 +29,7 @@ class UserSeeder extends Seeder
 
         $tecConsulado = new User();
         $tecConsulado->name = RoleEnum::ROLE_TECNICO;
-        $tecConsulado->email = 'tec.consulado@adopting.gob.sv';
+        $tecConsulado->email = 'tec.consulado@gmail.com';
         $tecConsulado->email_verified_at = new \DateTime();
         $tecConsulado->password = Hash::make(env('USER_SEEDER_PASSWORD', 'Admin123$'));
         $tecConsulado->created_at = new \DateTime();

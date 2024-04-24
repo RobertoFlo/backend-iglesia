@@ -14,7 +14,7 @@ class PermisosSeeder extends Seeder
      */
     public function run(): void
     {
-        $admin = Role::where('name'adminSETEFEPermisos,'Administrador')->first();
+        $admin = Role::where('name','Administrador')->first();
         $adminTEC= Role::where('name','Administrador de SETEFE')->first();
 
 
