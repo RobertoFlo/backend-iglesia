@@ -18,8 +18,8 @@ class UserSeeder extends Seeder
         $this->call(RoleSeeder::class);
 
         $admin = new User();
-        $admin->name = 'administrador';
-        $admin->email = env('USER_SEEDER_EMAIL', 'admin@admin.com');
+        $admin->name = RoleEnum::ROLE_ADMINISTRADOR;
+        $admin->email = 'admin@admin.com';
         $admin->email_verified_at = new \DateTime();
         $admin->password = Hash::make(env('USER_SEEDER_PASSWORD', 'Admin123$'));
         $admin->created_at = new \DateTime();

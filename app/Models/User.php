@@ -11,13 +11,14 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles;
-
+    use HasApiTokens, HasFactory, Notifiable,HasRoles;
+    public $guard_name = 'sanctum';
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
+   
     protected $fillable = [
         'name',
         'email',

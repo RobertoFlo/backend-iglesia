@@ -15,10 +15,9 @@ class PermisosSeeder extends Seeder
     public function run(): void
     {
         $admin = Role::where('name','Administrador')->first();
-        $adminTEC= Role::where('name','Administrador de SETEFE')->first();
+        $adminTEC= Role::where('name','Técnico')->first();
 
-
-
+       
         $AGREGAR_REGISTROS = Permission::create(['name' => 'GUARDAR_REGISTRO', 'label' => 'Visualizar boton agregar registro', 'guard_name' => 'sanctum']);
         $EDITAR_REGISTROS = Permission::create(['name' => 'EDITAR_REGISTRO', 'label' => 'Visualizar boton editar registro', 'guard_name' => 'sanctum']);
         $LISTAR_REGISTROS = Permission::create(['name' => 'LISTAR_REGISTROS', 'label' => 'Visualizar listado de registro', 'guard_name' => 'sanctum']);
@@ -27,7 +26,7 @@ class PermisosSeeder extends Seeder
         $EDITAR_PERSONAS = Permission::create(['name' => 'EDITAR_PERSONA', 'label' => 'Visualizar boton de editar persona', 'guard_name' => 'sanctum']);
         $LISTAR_PERSONAS = Permission::create(['name' => 'LISTAR_PERSONAS', 'label' => 'Visualizar listado de personas', 'guard_name' => 'sanctum']);
         $DASHBOARD = Permission::create(['name'=> 'DASHBOARD', 'label' => 'Visualizar dashboard','guard_name' =>'sanctum']);
-
+        
         $adminPermisos = [
             $AGREGAR_REGISTROS,
             $EDITAR_REGISTROS, 
@@ -38,6 +37,7 @@ class PermisosSeeder extends Seeder
             $LISTAR_PERSONAS,
             $DASHBOARD,
         ];
+      
         $adminTECPermisos = [
             $AGREGAR_REGISTROS,
             $EDITAR_REGISTROS, 
@@ -47,9 +47,9 @@ class PermisosSeeder extends Seeder
             $LISTAR_PERSONAS,
             $DASHBOARD,
         ];
-
+      
         $adminTEC->syncPermissions($adminTECPermisos);
-
+        
         $admin->syncPermissions($adminPermisos);
     }
 }
